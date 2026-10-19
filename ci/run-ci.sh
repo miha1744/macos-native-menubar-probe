@@ -31,6 +31,7 @@ trap 'exit 143' TERM
 trap 'exit 129' HUP
 /usr/bin/sw_vers > "$QB_STATE/os.txt"
 /usr/bin/uname -m > "$QB_STATE/architecture.txt"
+/usr/bin/csrutil status > "$QB_STATE/sip-status.txt" 2>&1 || true
 printf '%s\n' "${ImageOS:-unknown}" "${ImageVersion:-unknown}" > "$QB_STATE/image.txt"
 QB_CONSOLE=$(/usr/bin/stat -f %u /dev/console)
 if [[ "$QB_CONSOLE" != "$(/usr/bin/id -u)" ]] || ! /usr/bin/pgrep -x -u "$QB_CONSOLE" ControlCenter >/dev/null; then

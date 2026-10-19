@@ -2,6 +2,7 @@ import AppKit
 import ScreenCaptureKit
 import CoreMedia
 import CoreImage
+import Darwin
 
 // This probe is launched as its own GUI app by LaunchServices. It captures its
 // own SCStream; it is never evidence about Jump Desktop's capture process.
@@ -59,6 +60,7 @@ final class Probe: NSObject, NSApplicationDelegate {
     var displayBounds = CGRect.zero
     let context = CIContext(options: [.useSoftwareRenderer: true])
     var before: [String: Any]?
+    var measureOnly: Bool { ProcessInfo.processInfo.environment["QB_MEASURE_ONLY"] == "1" }
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         guard ProcessInfo.processInfo.environment["GITHUB_ACTIONS"] == "true",
@@ -70,7 +72,20 @@ final class Probe: NSObject, NSApplicationDelegate {
         guard root.path.hasPrefix(allowed) else { NSApp.terminate(nil); return }
         do { try FileManager.default.createDirectory(at: root, withIntermediateDirectories: true) }
         catch { NSApp.terminate(nil); return }
-        write("app-process.json", ["pid": ProcessInfo.processInfo.processIdentifier])
+        write("app-process.json", ["pid": ProcessInfo.processInfo.processIdentifier,
+          "parentPID": getppid(), "mode": measureOnly ? "measure-only" : "preference-cycle",
+          "leg": ProcessInfo.processInfo.environment["QB_ATTRIBUTION_LEG"] ?? "default"])
+        // Merely load/query class availability. No assessment assertion is created.
+        var libraries: [String: Bool] = [:]
+        for name in ["MenuBarClient", "MenuBarClientCore"] {
+            let path = "/System/Library/PrivateFrameworks/\(name).framework/\(name)"
+            libraries[name] = dlopen(path, RTLD_LAZY | RTLD_LOCAL) != nil
+        }
+        write("backend-availability.json", ["librariesLoaded": libraries,
+          "configurationClass": NSClassFromString("MBAssessmentModeConfiguration") != nil,
+          "assertionClass": NSClassFromString("MBAssessmentModeAssertion") != nil,
+          "scope": "Read-only runtime availability; no configuration/assertion/activation"])
+
         let panel = NSWindow(contentRect: NSRect(x: 120, y: 160, width: 470, height: 180), styleMask: [.titled], backing: .buffered, defer: false)
         panel.title = "QuietBar CI — own ScreenCaptureKit stream"
         let label = NSTextField(wrappingLabelWithString: "Ephemeral CI test.\nContinuous animation keeps the display stream producing complete frames.\nThis is not a Jump Desktop acceptance test.")
@@ -127,7 +142,7 @@ final class Probe: NSObject, NSApplicationDelegate {
             let target = systemOwner && targetName && onScreen && alpha > 0.05 && layer >= 20 && rect.height <= 80 && rect.width <= 400
             return ["id": item[kCGWindowNumber as String] ?? 0, "owner": item[kCGWindowOwnerName as String] ?? "", "bundleID": bundle,
                     "name": name, "layer": layer, "onScreen": onScreen, "alpha": alpha,
-                    "bounds": ["x": rect.minX, "y": rect.minY, "width": rect.width, "height": rect.height], "strictTarget": target]
+                    "bounds": ["x": Double(rect.minX), "y": Double(rect.minY), "width": Double(rect.width), "height": Double(rect.height)], "strictTarget": target]
         }
     }
     func purpleCount(_ image: CGImage, rect: CGRect) -> Int {
@@ -140,7 +155,7 @@ final class Probe: NSObject, NSApplicationDelegate {
         var count = 0
         for index in stride(from: 0, to: bytes.count, by: 4) {
             let red = Int(bytes[index]), green = Int(bytes[index + 1]), blue = Int(bytes[index + 2])
-            if blue > 145 && red > 55 && blue > green + 40 && red > green + 12 && blue > red + 20 { count += 1 }
+            if blue > 145 && red > 55 && blue > green + 40 && red >= green && blue > red + 20 { count += 1 }
         }
         return count
     }
@@ -181,6 +196,22 @@ final class Probe: NSObject, NSApplicationDelegate {
         }
         return data
     }
+    func measure() async {
+        let started = DispatchTime.now().uptimeNanoseconds
+        var samples: [[String: Any]] = []
+        for second in [8, 16, 24] {
+            let elapsed = Double(DispatchTime.now().uptimeNanoseconds - started) / 1_000_000_000
+            await pause(max(0, Double(second) - elapsed))
+            let name = "sample-\(second)s"
+            var sample = snapshot(name)
+            sample["elapsedSeconds"] = Double(DispatchTime.now().uptimeNanoseconds - started) / 1_000_000_000
+            sample["scheduledSecond"] = second
+            write("\(name).json", sample); marker("\(name)-ready")
+            samples.append(sample)
+        }
+        await finish("MEASUREMENT", "Fixed 8/16/24-second observations only; no visibility preference was changed and no hidden-target pass is inferred",
+          extra: ["samples": samples, "leg": ProcessInfo.processInfo.environment["QB_ATTRIBUTION_LEG"] ?? "unspecified"])
+    }
     func run() async {
         // The capture app does not write TCC or inherit Terminal permission. A
         // separate CI-only VM provisioner may attempt to grant this app access.
@@ -207,6 +238,7 @@ final class Probe: NSObject, NSApplicationDelegate {
             stream = capture
             try capture.addStreamOutput(frames, type: .screen, sampleHandlerQueue: DispatchQueue(label: "quietbar.ci.frames"))
             try await capture.startCapture()
+            if measureOnly { await measure(); return }
             await pause(8)
             let baseline = snapshot("before"); before = baseline
             write("before.json", baseline)
