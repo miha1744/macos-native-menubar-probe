@@ -6,3 +6,6 @@ The preference experiment checks one native visibility key with exact recovery.
 The independent responsibility experiment compares GUI launch with Apple Terminal
 and screen; see ci/ATTRIBUTION.md. Both require visual evidence and an active
 changing capture stream. Neither is a connected Jump Desktop acceptance test.
+
+[Actual negative preference results on macOS 14/15/26](results/preference-2026-10-19.md)
+include preserved screenshots and JSON.

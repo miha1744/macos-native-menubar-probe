@@ -15,3 +15,12 @@ Only a Terminal process newly started when no Terminal was running before the te
 The summary remains `MEASUREMENT`, even for a visible/absent/visible pattern. Root must manually inspect screenshots. No initial visible target, a permission failure, or frozen/stopped capture cannot prove hiding. Initial capture permission for Terminal is not assumed: the actual B preflight and stream decide it.
 
 This tests a [reported Sonoma launch-attribution behavior](https://github.com/lwouis/alt-tab-macos/issues/2606#issuecomment-2351026226). It is not a Jump Desktop recipe or an application backend: Jump may capture through a root launchd service that is unaffected by wrapping its GUI. No launchd/SIP modifications are made.
+
+
+## One explicit Terminal-permission correction
+
+`setup-ci-terminal-permission.sh` is a separate hosted-CI-only provisioner for the fixed Apple-signed `/System/Applications/Utilities/Terminal.app` / `com.apple.Terminal`. It validates the Apple anchor, creates that app's designated requirement, and writes/verifies only its exact ScreenCapture row in the system and current-user TCC stores. The own-GUI provisioner remains fixed and unchanged. The user-store grant follows the official runner image setup; no preinstalled Terminal permission is assumed after the observed B denial.
+
+B still must pass its own actual permission preflight and changing SCStream observations. If preflight remains false, the runner saves only the last 64 KiB of three minutes of filtered `tccd` messages mentioning the test/Terminal/screen chain or request/responsibility, for diagnosis rather than another blind grant. No database dump, broad permission reset, unknown process grant, or launchd change is performed.
+
+A responsible-PID API was not added: the local Darwin SDK headers do not provide a verified signature for one. `process-chain.txt` contains ordinary parent PIDs; it must not be presented as TCC's responsible-process identity.

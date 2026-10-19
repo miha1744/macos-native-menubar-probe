@@ -1,0 +1,18 @@
+{
+  "animatedPixelChanges" : 160,
+  "completeFrames" : 163,
+  "imageSaved" : true,
+  "lastAnimatedRegionHashFNV1a64" : "d250a6fd4a079365",
+  "streamError" : null,
+  "strictVisibleTargets" : 1,
+  "targetPurplePixels" : 801,
+  "targetRects" : [
+    {
+      "height" : 24,
+      "width" : 45,
+      "x" : 1655,
+      "y" : 0
+    }
+  ],
+  "visualEvidenceSource" : "native screencapture menubar region"
+}

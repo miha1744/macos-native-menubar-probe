@@ -1,0 +1,67 @@
+{
+  "run": "https://github.com/miha1744/macos-native-menubar-probe/actions/runs/39280432624",
+  "sourceCommit": "93a9306fc07b7751d0207d53383506723c140878",
+  "scope": "Own ScreenCaptureKit stream only; no Jump Desktop acceptance; SIP disabled on all hosted VMs",
+  "results": [
+    {
+      "os": "Version 14.8.9 (Build 23J631)",
+      "architecture": "arm64",
+      "sip": "System Integrity Protection status: disabled.",
+      "result": "FAIL",
+      "visibleBefore": 1,
+      "visibleDuring": 1,
+      "completeFramesDuring": 70,
+      "animatedChangesDuring": 68,
+      "exactPreferenceRestored": true,
+      "backend": {
+        "assertionClass": false,
+        "configurationClass": false,
+        "librariesLoaded": {
+          "MenuBarClient": false,
+          "MenuBarClientCore": false
+        },
+        "scope": "Read-only runtime availability; no configuration/assertion/activation"
+      }
+    },
+    {
+      "os": "Version 15.7.9 (Build 24G830)",
+      "architecture": "arm64",
+      "sip": "System Integrity Protection status: disabled.",
+      "result": "FAIL",
+      "visibleBefore": 1,
+      "visibleDuring": 1,
+      "completeFramesDuring": 70,
+      "animatedChangesDuring": 67,
+      "exactPreferenceRestored": true,
+      "backend": {
+        "assertionClass": false,
+        "configurationClass": false,
+        "librariesLoaded": {
+          "MenuBarClient": false,
+          "MenuBarClientCore": false
+        },
+        "scope": "Read-only runtime availability; no configuration/assertion/activation"
+      }
+    },
+    {
+      "os": "Version 26.6.2 (Build 25G83)",
+      "architecture": "arm64",
+      "sip": "System Integrity Protection status: disabled.",
+      "result": "FAIL",
+      "visibleBefore": 1,
+      "visibleDuring": 1,
+      "completeFramesDuring": 78,
+      "animatedChangesDuring": 72,
+      "exactPreferenceRestored": true,
+      "backend": {
+        "assertionClass": false,
+        "configurationClass": false,
+        "librariesLoaded": {
+          "MenuBarClient": false,
+          "MenuBarClientCore": false
+        },
+        "scope": "Read-only runtime availability; no configuration/assertion/activation"
+      }
+    }
+  ]
+}

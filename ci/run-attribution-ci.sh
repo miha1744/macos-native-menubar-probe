@@ -107,6 +107,9 @@ fi
 /bin/bash "$QB_BASE/setup-ci-permission.sh" "$QB_APP" > "$QB_EVIDENCE/permission-setup.log" 2>&1 || true
 qb_gui_leg A1
 /bin/mkdir -p "$QB_EVIDENCE/B"
+# Explicitly provision only Apple Terminal. Earlier images' bundled permission
+# did not make actual B preflight succeed; no approval is assumed here.
+/bin/bash "$QB_BASE/setup-ci-terminal-permission.sh" > "$QB_EVIDENCE/B/terminal-permission-setup.log" 2>&1 || true
 # Generate a .command that is executed by Apple Terminal in a real GUI/TTY chain.
 # Only the detached screen child's environment is supplied explicitly.
 /usr/bin/python3 - "$QB_EVIDENCE/launch-B.command" "$QB_EXEC" "$QB_EVIDENCE/B" "$RUNNER_TEMP" "$QB_SESSION" <<'PY'
@@ -145,6 +148,27 @@ fi
 qb_wait "$QB_EVIDENCE/B" capture-finished 35 || true
 qb_stop_probe "$QB_EVIDENCE/B"
 /usr/bin/screen -S "$QB_SESSION" -X quit >/dev/null 2>&1 || true
+# If B was denied, retain a bounded diagnostic from tccd only. Never copy a
+# TCC database or dump unrelated unified logs. The predicate is limited to this
+# test's bundle/launch chain and request/responsibility messages.
+if /usr/bin/python3 - "$QB_EVIDENCE/B/capture-result.json" <<'PYDIAG'
+import json,pathlib,sys
+file=pathlib.Path(sys.argv[1])
+result=json.loads(file.read_text()) if file.exists() else {}
+sys.exit(0 if result.get('permissionPreflight') is False else 1)
+PYDIAG
+then
+  QB_LOG_PRIVATE="$QB_ROOT/terminal-tccd-diagnostic.tmp"
+  /usr/bin/log show --last 3m --style compact --info --debug --predicate 'process == "tccd" AND (eventMessage CONTAINS[c] "local.quietbar.ci.captureprobe" OR eventMessage CONTAINS[c] "com.apple.Terminal" OR eventMessage CONTAINS[c] "/usr/bin/screen" OR eventMessage CONTAINS[c] "requesting" OR eventMessage CONTAINS[c] "responsible")' \
+    > "$QB_LOG_PRIVATE" 2>&1 || true
+  /usr/bin/python3 - "$QB_LOG_PRIVATE" "$QB_EVIDENCE/B/tccd-denial.log" <<'PYLOG'
+import pathlib,sys
+source=pathlib.Path(sys.argv[1])
+# Keep the tail where B's most recent denial/responsibility is expected.
+data=source.read_bytes() if source.exists() else b''
+pathlib.Path(sys.argv[2]).write_bytes(data[-65536:])
+PYLOG
+fi
 /bin/sleep 3
 qb_gui_leg A2
 /usr/bin/python3 - "$QB_EVIDENCE" <<'PY'
