@@ -1,0 +1,646 @@
+{
+  "schema": 1,
+  "status": "MEASUREMENT",
+  "observedPattern": "VISIBLE_ABSENT_VISIBLE_DELAYED_CHILD",
+  "runId": 39283238857,
+  "runURL": "https://github.com/miha1744/macos-native-menubar-probe/actions/runs/39283238857",
+  "sourceCommit": "416152396735d2381010a3a6980c2b81b8c8c957",
+  "experimentMode": "terminal-exit-before-forkexec",
+  "delayedCaptureRequested": true,
+  "independentReview": {
+    "configurationCount": 4,
+    "native24sImagesViewed": 12,
+    "chronologyAndPIDAgreementVerified": true,
+    "allRecordedSamplesChecked": [
+      8,
+      16,
+      24
+    ]
+  },
+  "captureSubject": "Own ScreenCaptureKit probe forked and execed by a surviving Python waiting launcher after Terminal exited",
+  "jumpDesktopTested": false,
+  "sipEnabledTested": false,
+  "ordinaryPermissionApprovalTested": false,
+  "distributableBackendAccepted": false,
+  "existingJumpAgentReattributionTested": false,
+  "limitations": [
+    "All four hosted VMs had SIP disabled and CI-only ScreenCapture permission provisioning.",
+    "This trace covers a simple surviving Python waiting launcher, its new child, and one new SCStream per B phase.",
+    "It does not validate an installed Jump agent, DesktopProxy, root service, reconnects, or a production GUI/DMG.",
+    "The private responsible-PID diagnostic is not an Endpoint Security audit token or proof of historical TCC attribution.",
+    "A zero purple-pixel count with empty target rectangles is not independent proof; native 24s images were manually reviewed."
+  ],
+  "preservation": "All listed raw files are unmodified byte copies; responsibility interval snapshots are included only for macos-14.",
+  "configurations": [
+    {
+      "runnerLabel": "macos-14",
+      "macOS": "14.8.9",
+      "build": "23J631",
+      "architecture": "arm64",
+      "sipStatus": "disabled",
+      "rawEvidenceDirectory": "macos-14",
+      "status": "MEASUREMENT",
+      "observedPattern": "VISIBLE_ABSENT_VISIBLE_DELAYED_CHILD",
+      "manualNative24sReview": {
+        "A1": "visible",
+        "B": "absent",
+        "A2": "visible"
+      },
+      "samples": {
+        "A1": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.912048417,
+            "completeFrames": 45,
+            "animatedPixelChanges": 43,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 801,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.532543334,
+            "completeFrames": 83,
+            "animatedPixelChanges": 80,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 801,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.662822875,
+            "completeFrames": 123,
+            "animatedPixelChanges": 120,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 801,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ],
+        "B": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.396618791,
+            "completeFrames": 44,
+            "animatedPixelChanges": 41,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.675612083,
+            "completeFrames": 86,
+            "animatedPixelChanges": 83,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.657907,
+            "completeFrames": 125,
+            "animatedPixelChanges": 122,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ],
+        "A2": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.654089666,
+            "completeFrames": 44,
+            "animatedPixelChanges": 42,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 801,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.410525958,
+            "completeFrames": 83,
+            "animatedPixelChanges": 81,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 801,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.5991225,
+            "completeFrames": 124,
+            "animatedPixelChanges": 122,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 801,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ]
+      },
+      "independentlyVerifiedChronology": {
+        "verified": true,
+        "launcherPID": 2919,
+        "terminalPID": 2880,
+        "childAndProbePID": 2957,
+        "probeParentPID": 2919,
+        "readyUTC": "2026-10-19T16:10:35.521454+00:00",
+        "terminalExitGateUTC": "2026-10-19T16:10:36.580296+00:00",
+        "terminalExitObservedUTC": "2026-10-19T16:10:36.616548+00:00",
+        "forkRecordedUTC": "2026-10-19T16:10:36.643253+00:00",
+        "childBeforeExecUTC": "2026-10-19T16:10:36.664367+00:00",
+        "childExitedUTC": "2026-10-19T16:11:01.650691+00:00",
+        "childExitCode": 0,
+        "terminalAfterTermBytes": 0,
+        "terminalPIDAfterTermBytes": 0
+      },
+      "rawFilesCopiedUnmodified": [
+        "os.txt",
+        "architecture.txt",
+        "sip-status.txt",
+        "attribution-result.json",
+        "B/launcher-ready.json",
+        "B/terminal-term-and-exit-confirmed",
+        "B/after-terminal-exit.json",
+        "B/child-before-exec.json",
+        "B/forked.json",
+        "B/launcher-result.json",
+        "B/terminal-after-term.txt",
+        "B/terminal-pid-after-term.txt",
+        "A1/capture-result.json",
+        "A1/app-process.json",
+        "A1/sample-24s-system-menubar.png",
+        "B/probe/capture-result.json",
+        "B/probe/app-process.json",
+        "B/probe/sample-24s-system-menubar.png",
+        "A2/capture-result.json",
+        "A2/app-process.json",
+        "A2/sample-24s-system-menubar.png",
+        "B/child-responsibility-8s.json",
+        "B/child-responsibility-16s.json"
+      ]
+    },
+    {
+      "runnerLabel": "macos-15",
+      "macOS": "15.7.9",
+      "build": "24G830",
+      "architecture": "arm64",
+      "sipStatus": "disabled",
+      "rawEvidenceDirectory": "macos-15",
+      "status": "MEASUREMENT",
+      "observedPattern": "VISIBLE_ABSENT_VISIBLE_DELAYED_CHILD",
+      "manualNative24sReview": {
+        "A1": "visible",
+        "B": "absent",
+        "A2": "visible"
+      },
+      "samples": {
+        "A1": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.859594166,
+            "completeFrames": 52,
+            "animatedPixelChanges": 44,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.629112208,
+            "completeFrames": 92,
+            "animatedPixelChanges": 84,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.640028041,
+            "completeFrames": 132,
+            "animatedPixelChanges": 124,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ],
+        "B": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.447098166,
+            "completeFrames": 46,
+            "animatedPixelChanges": 43,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.645534625,
+            "completeFrames": 87,
+            "animatedPixelChanges": 83,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.708580791,
+            "completeFrames": 126,
+            "animatedPixelChanges": 122,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ],
+        "A2": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.770673458,
+            "completeFrames": 46,
+            "animatedPixelChanges": 43,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.64442425,
+            "completeFrames": 85,
+            "animatedPixelChanges": 82,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.635826916,
+            "completeFrames": 125,
+            "animatedPixelChanges": 122,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ]
+      },
+      "independentlyVerifiedChronology": {
+        "verified": true,
+        "launcherPID": 1979,
+        "terminalPID": 1930,
+        "childAndProbePID": 2021,
+        "probeParentPID": 1979,
+        "readyUTC": "2026-10-19T16:10:33.845694+00:00",
+        "terminalExitGateUTC": "2026-10-19T16:10:34.976571+00:00",
+        "terminalExitObservedUTC": "2026-10-19T16:10:35.030295+00:00",
+        "forkRecordedUTC": "2026-10-19T16:10:35.073581+00:00",
+        "childBeforeExecUTC": "2026-10-19T16:10:35.102468+00:00",
+        "childExitedUTC": "2026-10-19T16:11:00.343350+00:00",
+        "childExitCode": 0,
+        "terminalAfterTermBytes": 0,
+        "terminalPIDAfterTermBytes": 0
+      },
+      "rawFilesCopiedUnmodified": [
+        "os.txt",
+        "architecture.txt",
+        "sip-status.txt",
+        "attribution-result.json",
+        "B/launcher-ready.json",
+        "B/terminal-term-and-exit-confirmed",
+        "B/after-terminal-exit.json",
+        "B/child-before-exec.json",
+        "B/forked.json",
+        "B/launcher-result.json",
+        "B/terminal-after-term.txt",
+        "B/terminal-pid-after-term.txt",
+        "A1/capture-result.json",
+        "A1/app-process.json",
+        "A1/sample-24s-system-menubar.png",
+        "B/probe/capture-result.json",
+        "B/probe/app-process.json",
+        "B/probe/sample-24s-system-menubar.png",
+        "A2/capture-result.json",
+        "A2/app-process.json",
+        "A2/sample-24s-system-menubar.png"
+      ]
+    },
+    {
+      "runnerLabel": "macos-26",
+      "macOS": "26.6.2",
+      "build": "25G83",
+      "architecture": "arm64",
+      "sipStatus": "disabled",
+      "rawEvidenceDirectory": "macos-26",
+      "status": "MEASUREMENT",
+      "observedPattern": "VISIBLE_ABSENT_VISIBLE_DELAYED_CHILD",
+      "manualNative24sReview": {
+        "A1": "visible",
+        "B": "absent",
+        "A2": "visible"
+      },
+      "samples": {
+        "A1": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.697834208,
+            "completeFrames": 48,
+            "animatedPixelChanges": 43,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 795,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.702118042,
+            "completeFrames": 86,
+            "animatedPixelChanges": 77,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 795,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.629930333,
+            "completeFrames": 126,
+            "animatedPixelChanges": 117,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 795,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ],
+        "B": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.4744555,
+            "completeFrames": 47,
+            "animatedPixelChanges": 41,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.458807209,
+            "completeFrames": 87,
+            "animatedPixelChanges": 79,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.522506959,
+            "completeFrames": 128,
+            "animatedPixelChanges": 120,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ],
+        "A2": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.385953458,
+            "completeFrames": 46,
+            "animatedPixelChanges": 41,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 795,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.312489125,
+            "completeFrames": 87,
+            "animatedPixelChanges": 80,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 795,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.189180125,
+            "completeFrames": 127,
+            "animatedPixelChanges": 120,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 795,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ]
+      },
+      "independentlyVerifiedChronology": {
+        "verified": true,
+        "launcherPID": 1869,
+        "terminalPID": 1824,
+        "childAndProbePID": 1904,
+        "probeParentPID": 1869,
+        "readyUTC": "2026-10-19T16:10:38.251776+00:00",
+        "terminalExitGateUTC": "2026-10-19T16:10:38.581768+00:00",
+        "terminalExitObservedUTC": "2026-10-19T16:10:38.710015+00:00",
+        "forkRecordedUTC": "2026-10-19T16:10:38.743514+00:00",
+        "childBeforeExecUTC": "2026-10-19T16:10:38.765624+00:00",
+        "childExitedUTC": "2026-10-19T16:11:03.879446+00:00",
+        "childExitCode": 0,
+        "terminalAfterTermBytes": 0,
+        "terminalPIDAfterTermBytes": 0
+      },
+      "rawFilesCopiedUnmodified": [
+        "os.txt",
+        "architecture.txt",
+        "sip-status.txt",
+        "attribution-result.json",
+        "B/launcher-ready.json",
+        "B/terminal-term-and-exit-confirmed",
+        "B/after-terminal-exit.json",
+        "B/child-before-exec.json",
+        "B/forked.json",
+        "B/launcher-result.json",
+        "B/terminal-after-term.txt",
+        "B/terminal-pid-after-term.txt",
+        "A1/capture-result.json",
+        "A1/app-process.json",
+        "A1/sample-24s-system-menubar.png",
+        "B/probe/capture-result.json",
+        "B/probe/app-process.json",
+        "B/probe/sample-24s-system-menubar.png",
+        "A2/capture-result.json",
+        "A2/app-process.json",
+        "A2/sample-24s-system-menubar.png"
+      ]
+    },
+    {
+      "runnerLabel": "macos-15-intel",
+      "macOS": "15.7.9",
+      "build": "24G830",
+      "architecture": "x86_64",
+      "sipStatus": "disabled",
+      "rawEvidenceDirectory": "macos-15-intel",
+      "status": "MEASUREMENT",
+      "observedPattern": "VISIBLE_ABSENT_VISIBLE_DELAYED_CHILD",
+      "manualNative24sReview": {
+        "A1": "visible",
+        "B": "absent",
+        "A2": "visible"
+      },
+      "samples": {
+        "A1": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 9.523139031,
+            "completeFrames": 53,
+            "animatedPixelChanges": 42,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.304632628,
+            "completeFrames": 89,
+            "animatedPixelChanges": 76,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.503009029,
+            "completeFrames": 130,
+            "animatedPixelChanges": 117,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ],
+        "B": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 9.054957637,
+            "completeFrames": 49,
+            "animatedPixelChanges": 42,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.71647051,
+            "completeFrames": 89,
+            "animatedPixelChanges": 82,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.678388053,
+            "completeFrames": 129,
+            "animatedPixelChanges": 122,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ],
+        "A2": [
+          {
+            "scheduledSecond": 8,
+            "elapsedSeconds": 8.652596496,
+            "completeFrames": 45,
+            "animatedPixelChanges": 41,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 16,
+            "elapsedSeconds": 16.597623656,
+            "completeFrames": 85,
+            "animatedPixelChanges": 81,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          },
+          {
+            "scheduledSecond": 24,
+            "elapsedSeconds": 24.550051987,
+            "completeFrames": 125,
+            "animatedPixelChanges": 121,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "streamError": null,
+            "imageSaved": true
+          }
+        ]
+      },
+      "independentlyVerifiedChronology": {
+        "verified": true,
+        "launcherPID": 3118,
+        "terminalPID": 3077,
+        "childAndProbePID": 3184,
+        "probeParentPID": 3118,
+        "readyUTC": "2026-10-19T16:11:20.924325+00:00",
+        "terminalExitGateUTC": "2026-10-19T16:11:21.380609+00:00",
+        "terminalExitObservedUTC": "2026-10-19T16:11:21.536667+00:00",
+        "forkRecordedUTC": "2026-10-19T16:11:21.638616+00:00",
+        "childBeforeExecUTC": "2026-10-19T16:11:21.716369+00:00",
+        "childExitedUTC": "2026-10-19T16:11:47.344834+00:00",
+        "childExitCode": 0,
+        "terminalAfterTermBytes": 0,
+        "terminalPIDAfterTermBytes": 0
+      },
+      "rawFilesCopiedUnmodified": [
+        "os.txt",
+        "architecture.txt",
+        "sip-status.txt",
+        "attribution-result.json",
+        "B/launcher-ready.json",
+        "B/terminal-term-and-exit-confirmed",
+        "B/after-terminal-exit.json",
+        "B/child-before-exec.json",
+        "B/forked.json",
+        "B/launcher-result.json",
+        "B/terminal-after-term.txt",
+        "B/terminal-pid-after-term.txt",
+        "A1/capture-result.json",
+        "A1/app-process.json",
+        "A1/sample-24s-system-menubar.png",
+        "B/probe/capture-result.json",
+        "B/probe/app-process.json",
+        "B/probe/sample-24s-system-menubar.png",
+        "A2/capture-result.json",
+        "A2/app-process.json",
+        "A2/sample-24s-system-menubar.png"
+      ]
+    }
+  ]
+}

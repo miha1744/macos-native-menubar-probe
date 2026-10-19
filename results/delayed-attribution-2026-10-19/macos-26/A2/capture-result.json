@@ -1,0 +1,74 @@
+{
+  "before" : {
+
+  },
+  "captureSubject" : "own ScreenCaptureKit SCStream; Jump Desktop not tested",
+  "leg" : "A2-GUI",
+  "os" : "Version 26.6.2 (Build 25G83)",
+  "permissionPreflight" : true,
+  "reason" : "Fixed 8\/16\/24-second observations only; no visibility preference was changed and no hidden-target pass is inferred",
+  "samples" : [
+    {
+      "animatedPixelChanges" : 41,
+      "completeFrames" : 46,
+      "elapsedSeconds" : 8.3859534579999995,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "397fdf4b4585dd65",
+      "scheduledSecond" : 8,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 795,
+      "targetRects" : [
+        {
+          "height" : 30,
+          "width" : 48,
+          "x" : 748,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    },
+    {
+      "animatedPixelChanges" : 80,
+      "completeFrames" : 87,
+      "elapsedSeconds" : 16.312489124999999,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "25f52d47a76b97f5",
+      "scheduledSecond" : 16,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 795,
+      "targetRects" : [
+        {
+          "height" : 30,
+          "width" : 48,
+          "x" : 748,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    },
+    {
+      "animatedPixelChanges" : 120,
+      "completeFrames" : 127,
+      "elapsedSeconds" : 24.189180125,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "25f52d47a76b97f5",
+      "scheduledSecond" : 24,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 795,
+      "targetRects" : [
+        {
+          "height" : 30,
+          "width" : 48,
+          "x" : 748,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    }
+  ],
+  "schema" : 1,
+  "status" : "MEASUREMENT"
+}

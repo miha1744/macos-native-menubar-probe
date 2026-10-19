@@ -1,0 +1,74 @@
+{
+  "before" : {
+
+  },
+  "captureSubject" : "own ScreenCaptureKit SCStream; Jump Desktop not tested",
+  "leg" : "A1-GUI",
+  "os" : "Version 15.7.9 (Build 24G830)",
+  "permissionPreflight" : true,
+  "reason" : "Fixed 8\/16\/24-second observations only; no visibility preference was changed and no hidden-target pass is inferred",
+  "samples" : [
+    {
+      "animatedPixelChanges" : 44,
+      "completeFrames" : 52,
+      "elapsedSeconds" : 8.8595941660000008,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "477ecce580f0e376",
+      "scheduledSecond" : 8,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 877,
+      "targetRects" : [
+        {
+          "height" : 24,
+          "width" : 48,
+          "x" : 756,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    },
+    {
+      "animatedPixelChanges" : 84,
+      "completeFrames" : 92,
+      "elapsedSeconds" : 16.629112207999999,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "477ecce580f0e376",
+      "scheduledSecond" : 16,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 877,
+      "targetRects" : [
+        {
+          "height" : 24,
+          "width" : 48,
+          "x" : 756,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    },
+    {
+      "animatedPixelChanges" : 124,
+      "completeFrames" : 132,
+      "elapsedSeconds" : 24.640028041000001,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "477ecce580f0e376",
+      "scheduledSecond" : 24,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 877,
+      "targetRects" : [
+        {
+          "height" : 24,
+          "width" : 48,
+          "x" : 756,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    }
+  ],
+  "schema" : 1,
+  "status" : "MEASUREMENT"
+}

@@ -1,0 +1,30 @@
+{
+  "captureStarted": false,
+  "parentPID": 1869,
+  "pid": 1904,
+  "responsibility": {
+    "api": "responsibility_get_pid_responsible_for_pid (private)",
+    "available": true,
+    "endpointSecurityClientCreated": false,
+    "errno": 0,
+    "observedUTC": "2026-10-19T16:10:38.765671+00:00",
+    "pid": 1904,
+    "process": {
+      "executable": "/Applications/Xcode_26.6.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "parentPID": 1869,
+      "pid": 1904,
+      "uid": 501
+    },
+    "rawReturn": 1904,
+    "responsiblePID": 1904,
+    "responsibleProcess": {
+      "executable": "/Applications/Xcode_26.6.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "parentPID": 1869,
+      "pid": 1904,
+      "uid": 501
+    },
+    "schema": 1
+  },
+  "terminalExitPreviouslyObservedUTC": "2026-10-19T16:10:38.710015+00:00",
+  "utc": "2026-10-19T16:10:38.765624+00:00"
+}

@@ -1,0 +1,9 @@
+{
+  "captureAcceptance": "Read probe/capture-result.json and screenshots; launcher does not infer a hidden-target pass",
+  "childExitCode": 0,
+  "jumpDesktopTested": false,
+  "preferencesOrTCCModified": false,
+  "status": "MEASUREMENT_CHILD_EXITED",
+  "terminalPIDs": [],
+  "utc": "2026-10-19T16:11:47.344834+00:00"
+}

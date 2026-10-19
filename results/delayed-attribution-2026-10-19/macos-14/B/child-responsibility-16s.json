@@ -1,0 +1,51 @@
+{
+  "child": {
+    "api": "responsibility_get_pid_responsible_for_pid (private)",
+    "available": true,
+    "endpointSecurityClientCreated": false,
+    "errno": 0,
+    "observedUTC": "2026-10-19T16:10:52.792958+00:00",
+    "pid": 2957,
+    "process": {
+      "executable": "/Users/runner/work/_temp/quietbar-native-ci/build/QuietBarCaptureProbe.app/Contents/MacOS/QuietBarCaptureProbe",
+      "parentPID": 2919,
+      "pid": 2957,
+      "uid": 501
+    },
+    "rawReturn": 2957,
+    "responsiblePID": 2957,
+    "responsibleProcess": {
+      "executable": "/Users/runner/work/_temp/quietbar-native-ci/build/QuietBarCaptureProbe.app/Contents/MacOS/QuietBarCaptureProbe",
+      "parentPID": 2919,
+      "pid": 2957,
+      "uid": 501
+    },
+    "schema": 1
+  },
+  "elapsedSeconds": 16.080943249999997,
+  "launcher": {
+    "api": "responsibility_get_pid_responsible_for_pid (private)",
+    "available": true,
+    "endpointSecurityClientCreated": false,
+    "errno": 0,
+    "observedUTC": "2026-10-19T16:10:52.801695+00:00",
+    "pid": 2919,
+    "process": {
+      "executable": "/Applications/Xcode_15.4.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "parentPID": 2912,
+      "pid": 2919,
+      "uid": 501
+    },
+    "rawReturn": 2919,
+    "responsiblePID": 2919,
+    "responsibleProcess": {
+      "executable": "/Applications/Xcode_15.4.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "parentPID": 2912,
+      "pid": 2919,
+      "uid": 501
+    },
+    "schema": 1
+  },
+  "terminalPIDs": [],
+  "utc": "2026-10-19T16:10:52.734052+00:00"
+}

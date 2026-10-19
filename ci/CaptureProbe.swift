@@ -213,9 +213,9 @@ final class Probe: NSObject, NSApplicationDelegate {
           extra: ["samples": samples, "leg": ProcessInfo.processInfo.environment["QB_ATTRIBUTION_LEG"] ?? "unspecified"])
     }
     func run() async {
-        // The capture app does not write TCC or inherit Terminal permission. A
-        // separate CI-only VM provisioner may attempt to grant this app access.
-        // Its actual preflight remains authoritative for capture availability.
+        // No TCC writes occur here. GUI runs check the app's own grant;
+        // Terminal/screen runs may instead be attributed to that launch chain.
+        // Actual preflight and changing frames decide capture availability.
         guard CGPreflightScreenCaptureAccess() else {
             await finish("INCONCLUSIVE", "GUI capture app has no Screen Recording permission; no preference was changed"); return
         }

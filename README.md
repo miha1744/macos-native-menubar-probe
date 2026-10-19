@@ -14,4 +14,10 @@ include preserved screenshots, capture JSON, and recovery evidence.
 record a visible / absent / visible pattern with continuing own-stream capture.
 The result remains **MEASUREMENT**: all tested hosted VMs had SIP disabled,
 and neither experiment validates connected Jump Desktop or a distributable backend.
-A new capture started after Terminal exits remains untested.
+
+[Delayed-child observations on the same four configurations](results/delayed-attribution-2026-10-19.md)
+also record visible / absent / visible when a surviving Python waiting launcher
+forks and execs a new probe only after Terminal has exited. The chronology,
+matching PIDs, empty Terminal observations, and twelve native images are preserved.
+This verifies that simple launcher trace; an installed Jump agent, its capture
+helper, ordinary permission approval, and SIP-enabled Macs remain untested.

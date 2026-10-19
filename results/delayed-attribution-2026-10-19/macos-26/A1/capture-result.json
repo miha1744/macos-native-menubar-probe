@@ -1,0 +1,74 @@
+{
+  "before" : {
+
+  },
+  "captureSubject" : "own ScreenCaptureKit SCStream; Jump Desktop not tested",
+  "leg" : "A1-GUI",
+  "os" : "Version 26.6.2 (Build 25G83)",
+  "permissionPreflight" : true,
+  "reason" : "Fixed 8\/16\/24-second observations only; no visibility preference was changed and no hidden-target pass is inferred",
+  "samples" : [
+    {
+      "animatedPixelChanges" : 43,
+      "completeFrames" : 48,
+      "elapsedSeconds" : 8.6978342079999997,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "db1194e8ab639351",
+      "scheduledSecond" : 8,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 795,
+      "targetRects" : [
+        {
+          "height" : 30,
+          "width" : 48,
+          "x" : 748,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    },
+    {
+      "animatedPixelChanges" : 77,
+      "completeFrames" : 86,
+      "elapsedSeconds" : 16.702118041999999,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "db1194e8ab639351",
+      "scheduledSecond" : 16,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 795,
+      "targetRects" : [
+        {
+          "height" : 30,
+          "width" : 48,
+          "x" : 748,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    },
+    {
+      "animatedPixelChanges" : 117,
+      "completeFrames" : 126,
+      "elapsedSeconds" : 24.629930333000001,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "db1194e8ab639351",
+      "scheduledSecond" : 24,
+      "streamError" : null,
+      "strictVisibleTargets" : 1,
+      "targetPurplePixels" : 795,
+      "targetRects" : [
+        {
+          "height" : 30,
+          "width" : 48,
+          "x" : 748,
+          "y" : 0
+        }
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    }
+  ],
+  "schema" : 1,
+  "status" : "MEASUREMENT"
+}

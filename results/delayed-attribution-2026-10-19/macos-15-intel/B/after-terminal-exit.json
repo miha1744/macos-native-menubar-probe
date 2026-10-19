@@ -1,0 +1,30 @@
+{
+  "allCurrentUserTerminalPIDs": [],
+  "captureStarted": false,
+  "responsibility": {
+    "api": "responsibility_get_pid_responsible_for_pid (private)",
+    "available": true,
+    "endpointSecurityClientCreated": false,
+    "errno": 0,
+    "observedUTC": "2026-10-19T16:11:21.610818+00:00",
+    "pid": 3118,
+    "process": {
+      "executable": "/Applications/Xcode_16.4.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "parentPID": 3113,
+      "pid": 3118,
+      "uid": 501
+    },
+    "rawReturn": 3118,
+    "responsiblePID": 3118,
+    "responsibleProcess": {
+      "executable": "/Applications/Xcode_16.4.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app/Contents/MacOS/Python",
+      "parentPID": 3113,
+      "pid": 3118,
+      "uid": 501
+    },
+    "schema": 1
+  },
+  "terminalIdentity": null,
+  "terminalPID": 3077,
+  "utc": "2026-10-19T16:11:21.536667+00:00"
+}
