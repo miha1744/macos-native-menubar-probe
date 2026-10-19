@@ -1,0 +1,24 @@
+name: Intel capture responsibility experiment
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  attribution-intel:
+    runs-on: macos-15-intel
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Observe GUI versus Terminal responsibility on Intel
+        shell: bash
+        run: bash ci/run-attribution-ci.sh
+      - name: Collect Intel observations for visual review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: attribution-macos15-intel-${{ github.run_id }}
+          path: ${{ runner.temp }}/quietbar-native-ci/evidence
+          retention-days: 1
+          if-no-files-found: error
