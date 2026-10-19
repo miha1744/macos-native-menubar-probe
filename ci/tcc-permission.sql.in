@@ -1,0 +1,14 @@
+.timeout 5000
+BEGIN IMMEDIATE;
+INSERT INTO access (
+  service, client, client_type, auth_value, auth_reason, auth_version, csreq,
+  policy_id, indirect_object_identifier_type, indirect_object_identifier,
+  indirect_object_code_identity, flags, last_modified
+) VALUES (
+  'kTCCServiceScreenCapture', 'local.quietbar.ci.captureprobe', 0, 2, 4, 1,
+  X'__QB_CSREQ_HEX__', NULL, 0, 'UNUSED', NULL, 0, __QB_TIMESTAMP__
+)
+ON CONFLICT(service, client, client_type, indirect_object_identifier)
+DO UPDATE SET auth_value = 2, auth_reason = 4, auth_version = 1,
+  csreq = excluded.csreq, last_modified = excluded.last_modified;
+COMMIT;
