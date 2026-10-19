@@ -1,0 +1,30 @@
+name: Delayed child capture responsibility experiment
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  attribution-delayed:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-14, macos-15, macos-26, macos-15-intel]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - name: Observe capture child created after Terminal exit
+        shell: bash
+        env:
+          QB_DELAYED_CAPTURE: '1'
+        run: bash ci/run-attribution-ci.sh
+      - name: Collect delayed observations for visual review
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: attribution-delayed-${{ matrix.os }}-${{ github.run_id }}
+          path: ${{ runner.temp }}/quietbar-native-ci/evidence
+          retention-days: 1
+          if-no-files-found: error

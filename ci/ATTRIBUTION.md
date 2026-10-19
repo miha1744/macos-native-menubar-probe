@@ -23,4 +23,27 @@ This tests a [reported Sonoma launch-attribution behavior](https://github.com/lw
 
 B still must pass its own actual permission preflight and changing SCStream observations. If preflight remains false, the runner saves only the last 64 KiB of three minutes of filtered `tccd` messages mentioning the test/Terminal/screen chain or request/responsibility, for diagnosis rather than another blind grant. No database dump, broad permission reset, unknown process grant, or launchd change is performed.
 
-A responsible-PID API was not added: the local Darwin SDK headers do not provide a verified signature for one. `process-chain.txt` contains ordinary parent PIDs; it must not be presented as TCC's responsible-process identity.
+`process-chain.txt` contains ordinary parent PIDs; it must not be presented as TCC's responsible-process identity.
+
+## Delayed child after Terminal exit
+
+`QB_DELAYED_CAPTURE=1` selects a separate experiment. The manual `attribution-delayed.yml` workflow runs it on standard public `macos-14`, `macos-15`, `macos-26`, and `macos-15-intel` runners, with an eight-minute job limit and one-day artifacts. The default experiment remains unchanged: it starts B capture while Terminal is alive and requests Terminal TERM after the first sample.
+
+Delayed mode retains the complete A1/B/A2 sequence and uses the same built capture Mach-O. B is launched through Terminal and a uniquely named detached screen session, but that session initially contains only `delayed_child_launcher.py`. The waiting launcher cannot start Probe or create an SCStream before the exit gate:
+
+1. Both the initial and fresh pre-B Terminal query must find no current-user Terminal. Otherwise B is `INCONCLUSIVE`, without opening Terminal or launching Probe.
+2. The runner opens its generated `.command` in Terminal, identifies exactly one newly created Terminal PID, and records it atomically in `B/terminal.pid`.
+3. The waiting launcher verifies that PID is the current user's live Terminal, records `launcher-ready.json`, and waits without forking a capture child.
+4. The runner sends TERM only to that new Terminal PID, verifies both the PID's exit and an empty current-user Terminal list, then atomically writes `terminal-term-and-exit-confirmed`. A failed query or Terminal that remains running produces `INCONCLUSIVE` and no gate.
+5. The launcher independently checks both absences, records `after-terminal-exit.json`, forks, rechecks in the child, writes `child-before-exec.json`, then execs Probe. Probe's first capture-capable executable therefore starts after the recorded exit. B's ordinary 8/16/24-second observations are under **`B/probe/`**.
+6. The launcher records read-only responsibility snapshots at 0.5/2/8/16 seconds and reaps its own child. Timeout/signals can terminate only its unreaped child. The runner closes only its unique screen session, then observes the normal A2 leg.
+
+The summary records `experimentMode: terminal-exit-before-forkexec`, `delayedCaptureRequested: true`, and `delayedLaunchChronology`. A delayed pattern is named `VISIBLE_ABSENT_VISIBLE_DELAYED_CHILD` only when A1 and A2 are visible with changing capture, B is absent with changing capture, and ready/gate/exit/pre-exec times and launcher/child/Probe PIDs agree. Missing or inconsistent chronology prevents a positive delayed pattern. Screenshots still require manual review; an empty target rectangle list makes a zero purple-pixel count insufficient on its own.
+
+This tests whether a surviving launcher can create a **new** capture child after Terminal is gone. A positive result does not establish that an already-running Jump agent can be reattributed, nor that a launchd-created Jump helper uses this ancestry. Actual Jump child creation, repeated sessions and restarts, uninterrupted remote frames, ordinary permission approval, and SIP-enabled systems require their own acceptance test. All runner SIP output is retained; SIP-disabled CI success does not establish normal-Mac compatibility.
+
+## Optional responsibility diagnostics
+
+The two generic CI helpers contain no QuietBar product code. `responsibility_read.py` uses the private, dynamically resolved `responsibility_get_pid_responsible_for_pid` only to read a PID. It creates no Endpoint Security client and changes no TCC, preferences, or process responsibility. The API may be absent or deny access; missing/denied values stay unknown and never become zero or an acceptance condition. It is a private diagnostic, not a public libproc API or a product backend.
+
+Apple's public [Endpoint Security responsible audit token](https://developer.apple.com/documentation/endpointsecurity/es_process_t/responsible_audit_token) is a different surface and requires an ES client entitlement. Its documentation allows fallback to self when the responsible process has exited; an after-exit snapshot does not prove historical TCC attribution. A public entitlement-free libproc getter for this identity was not established. Ordinary PPID and the optional private snapshot are recorded separately.
