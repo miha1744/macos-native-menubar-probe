@@ -1,0 +1,9 @@
+{
+  "assertionClass" : false,
+  "configurationClass" : false,
+  "librariesLoaded" : {
+    "MenuBarClient" : false,
+    "MenuBarClientCore" : false
+  },
+  "scope" : "Read-only runtime availability; no configuration\/assertion\/activation"
+}

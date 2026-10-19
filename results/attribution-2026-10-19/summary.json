@@ -1,0 +1,331 @@
+{
+  "schema": 1,
+  "status": "MEASUREMENT",
+  "run": "https://github.com/miha1744/macos-native-menubar-probe/actions/runs/39281298640",
+  "sourceCommit": "7188720c34fdb16f4fad548bd1b91bd37598d198",
+  "captureSubject": "Own ScreenCaptureKit stream only; Jump Desktop/root capture service not tested",
+  "scope": "Hosted arm64 macOS 14/15/26 and x86_64 macOS 15 VMs; SIP disabled on all four; VM-only capture-permission provisioning; not a distributable backend or normal SIP-enabled Mac acceptance",
+  "preferenceMutation": false,
+  "manualNative24sScreenshotReview": "Completed for A1/B/A2 on all four VMs; visible/absent/visible matches the recorded target metadata",
+  "results": [
+    {
+      "os": "ProductName:\t\tmacOS\nProductVersion:\t\t14.8.9\nBuildVersion:\t\t23J631",
+      "architecture": "arm64",
+      "sip": "System Integrity Protection status: disabled.",
+      "status": "MEASUREMENT",
+      "observedPattern": "VISIBLE_ABSENT_VISIBLE",
+      "terminalAfterTermBytes": 0,
+      "phases": {
+        "A1": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 120,
+            "completeFrames": 123,
+            "elapsedSeconds": 24.483757833,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "9cd06ee802e8d165",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 801,
+            "targetRects": [
+              {
+                "height": 24,
+                "width": 45,
+                "x": 1655,
+                "y": 0
+              }
+            ],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        },
+        "B": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 120,
+            "completeFrames": 128,
+            "elapsedSeconds": 24.63153175,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "d250a6fd4a079365",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "targetRects": [],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        },
+        "A2": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 119,
+            "completeFrames": 124,
+            "elapsedSeconds": 24.433561083,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "9cd06ee802e8d165",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 801,
+            "targetRects": [
+              {
+                "height": 24,
+                "width": 45,
+                "x": 1655,
+                "y": 0
+              }
+            ],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        }
+      },
+      "BCompleteFrames8sTo24s": 84,
+      "BAnimatedChanges8sTo24s": 81
+    },
+    {
+      "os": "ProductName:\t\tmacOS\nProductVersion:\t\t15.7.9\nBuildVersion:\t\t24G830",
+      "architecture": "arm64",
+      "sip": "System Integrity Protection status: disabled.",
+      "status": "MEASUREMENT",
+      "observedPattern": "VISIBLE_ABSENT_VISIBLE",
+      "terminalAfterTermBytes": 0,
+      "phases": {
+        "A1": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 122,
+            "completeFrames": 132,
+            "elapsedSeconds": 24.6436955,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "477ecce580f0e376",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "targetRects": [
+              {
+                "height": 24,
+                "width": 48,
+                "x": 756,
+                "y": 0
+              }
+            ],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        },
+        "B": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 121,
+            "completeFrames": 125,
+            "elapsedSeconds": 24.593868875,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "2c537fe783e24fa6",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "targetRects": [],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        },
+        "A2": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 122,
+            "completeFrames": 125,
+            "elapsedSeconds": 24.517765709,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "49aca99c97e95a82",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "targetRects": [
+              {
+                "height": 24,
+                "width": 48,
+                "x": 756,
+                "y": 0
+              }
+            ],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        }
+      },
+      "BCompleteFrames8sTo24s": 85,
+      "BAnimatedChanges8sTo24s": 82
+    },
+    {
+      "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83",
+      "architecture": "arm64",
+      "sip": "System Integrity Protection status: disabled.",
+      "status": "MEASUREMENT",
+      "observedPattern": "VISIBLE_ABSENT_VISIBLE",
+      "terminalAfterTermBytes": 0,
+      "phases": {
+        "A1": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 119,
+            "completeFrames": 128,
+            "elapsedSeconds": 24.278649041,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "db1194e8ab639351",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 795,
+            "targetRects": [
+              {
+                "height": 30,
+                "width": 48,
+                "x": 748,
+                "y": 0
+              }
+            ],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        },
+        "B": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 122,
+            "completeFrames": 134,
+            "elapsedSeconds": 24.216099917,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "397fdf4b4585dd65",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "targetRects": [],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        },
+        "A2": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 120,
+            "completeFrames": 127,
+            "elapsedSeconds": 24.192600417,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "25f52d47a76b97f5",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 795,
+            "targetRects": [
+              {
+                "height": 30,
+                "width": 48,
+                "x": 748,
+                "y": 0
+              }
+            ],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        }
+      },
+      "BCompleteFrames8sTo24s": 84,
+      "BAnimatedChanges8sTo24s": 80
+    },
+    {
+      "run": "https://github.com/miha1744/macos-native-menubar-probe/actions/runs/39282375519",
+      "sourceCommit": "597a147bf998c94606064db32a60018a0450e13b",
+      "os": "ProductName:\t\tmacOS\nProductVersion:\t\t15.7.9\nBuildVersion:\t\t24G830",
+      "architecture": "x86_64",
+      "sip": "System Integrity Protection status: disabled.",
+      "status": "MEASUREMENT",
+      "observedPattern": "VISIBLE_ABSENT_VISIBLE",
+      "terminalAfterTermBytes": 0,
+      "phases": {
+        "A1": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 121,
+            "completeFrames": 131,
+            "elapsedSeconds": 24.61664477,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "d250a6fd4a079365",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "targetRects": [
+              {
+                "height": 24,
+                "width": 48,
+                "x": 1652,
+                "y": 0
+              }
+            ],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        },
+        "B": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 122,
+            "completeFrames": 131,
+            "elapsedSeconds": 24.716689808,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "9cd06ee802e8d165",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 0,
+            "targetPurplePixels": 0,
+            "targetRects": [],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        },
+        "A2": {
+          "permissionPreflight": true,
+          "status": "MEASUREMENT",
+          "lastSample": {
+            "animatedPixelChanges": 122,
+            "completeFrames": 125,
+            "elapsedSeconds": 24.588991735,
+            "imageSaved": true,
+            "lastAnimatedRegionHashFNV1a64": "d250a6fd4a079365",
+            "scheduledSecond": 24,
+            "streamError": null,
+            "strictVisibleTargets": 1,
+            "targetPurplePixels": 877,
+            "targetRects": [
+              {
+                "height": 24,
+                "width": 48,
+                "x": 1652,
+                "y": 0
+              }
+            ],
+            "visualEvidenceSource": "native screencapture menubar region"
+          }
+        }
+      },
+      "BCompleteFrames8sTo24s": 84,
+      "BAnimatedChanges8sTo24s": 80
+    }
+  ],
+  "additionalRuns": [
+    {
+      "run": "https://github.com/miha1744/macos-native-menubar-probe/actions/runs/39282375519",
+      "sourceCommit": "597a147bf998c94606064db32a60018a0450e13b",
+      "architecture": "x86_64"
+    }
+  ],
+  "targetPurplePixelsInterpretation": "Counts only within targetRects; an empty targetRects list reduces to zero. Zero is not an independent measurement of native target absence.",
+  "newCaptureAfterTerminalExitTested": false
+}

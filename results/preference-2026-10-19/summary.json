@@ -1,7 +1,7 @@
 {
   "run": "https://github.com/miha1744/macos-native-menubar-probe/actions/runs/39280432624",
   "sourceCommit": "93a9306fc07b7751d0207d53383506723c140878",
-  "scope": "Own ScreenCaptureKit stream only; no Jump Desktop acceptance; SIP disabled on all hosted VMs",
+  "scope": "Own ScreenCaptureKit stream only; no Jump Desktop acceptance; SIP disabled on all four hosted VMs",
   "results": [
     {
       "os": "Version 14.8.9 (Build 23J631)",
@@ -62,6 +62,42 @@
         },
         "scope": "Read-only runtime availability; no configuration/assertion/activation"
       }
+    },
+    {
+      "run": "https://github.com/miha1744/macos-native-menubar-probe/actions/runs/39280436425",
+      "sourceCommit": "93a9306fc07b7751d0207d53383506723c140878",
+      "os": "Version 15.7.9 (Build 24G830)",
+      "architecture": "x86_64",
+      "sip": "System Integrity Protection status: disabled.",
+      "result": "FAIL",
+      "visibleBefore": 1,
+      "visibleDuring": 1,
+      "visibleAfter": 1,
+      "completeFramesDuring": 70,
+      "animatedChangesDuring": 69,
+      "exactPreferenceRestored": true,
+      "restorationEvidence": {
+        "originalKind": "macos-15-intel/original-kind",
+        "originalValue": "macos-15-intel/original-value",
+        "restoredMarker": "macos-15-intel/restored",
+        "log": "macos-15-intel/restoration.log"
+      },
+      "backend": {
+        "assertionClass": false,
+        "configurationClass": false,
+        "librariesLoaded": {
+          "MenuBarClient": false,
+          "MenuBarClientCore": false
+        },
+        "scope": "Read-only runtime availability; no configuration/assertion/activation"
+      }
+    }
+  ],
+  "additionalRuns": [
+    {
+      "run": "https://github.com/miha1744/macos-native-menubar-probe/actions/runs/39280436425",
+      "sourceCommit": "93a9306fc07b7751d0207d53383506723c140878",
+      "architecture": "x86_64"
     }
   ]
 }

@@ -1,0 +1,66 @@
+{
+  "after" : {
+    "animatedPixelChanges" : 111,
+    "completeFrames" : 123,
+    "imageSaved" : true,
+    "lastAnimatedRegionHashFNV1a64" : "9cd06ee802e8d165",
+    "streamError" : null,
+    "strictVisibleTargets" : 1,
+    "targetPurplePixels" : 877,
+    "targetRects" : [
+      {
+        "height" : 24,
+        "width" : 48,
+        "x" : 1652,
+        "y" : 0
+      }
+    ],
+    "visualEvidenceSource" : "native screencapture menubar region"
+  },
+  "before" : {
+    "animatedPixelChanges" : 42,
+    "completeFrames" : 53,
+    "imageSaved" : true,
+    "lastAnimatedRegionHashFNV1a64" : "d250a6fd4a079365",
+    "streamError" : null,
+    "strictVisibleTargets" : 1,
+    "targetPurplePixels" : 877,
+    "targetRects" : [
+      {
+        "height" : 24,
+        "width" : 48,
+        "x" : 1652,
+        "y" : 0
+      }
+    ],
+    "visualEvidenceSource" : "native screencapture menubar region"
+  },
+  "captureSubject" : "own ScreenCaptureKit SCStream; Jump Desktop not tested",
+  "continuedAnimatedPixelChanges" : 69,
+  "continuedCompleteFrames" : 70,
+  "os" : "Version 15.7.9 (Build 24G830)",
+  "permissionPreflight" : true,
+  "reason" : "Candidate did not remove the verified visible target while capture continued",
+  "restored" : {
+    "animatedPixelChanges" : 164,
+    "completeFrames" : 178,
+    "imageSaved" : true,
+    "lastAnimatedRegionHashFNV1a64" : "d250a6fd4a079365",
+    "streamError" : null,
+    "strictVisibleTargets" : 1,
+    "targetPurplePixels" : 877,
+    "targetRects" : [
+      {
+        "height" : 24,
+        "width" : 48,
+        "x" : 1652,
+        "y" : 0
+      }
+    ],
+    "visualEvidenceSource" : "native screencapture menubar region"
+  },
+  "restoredAnimatedPixelDelta" : 53,
+  "restoredCompleteFrameDelta" : 55,
+  "schema" : 1,
+  "status" : "FAIL"
+}

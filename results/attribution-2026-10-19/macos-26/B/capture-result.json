@@ -1,0 +1,59 @@
+{
+  "before" : {
+
+  },
+  "captureSubject" : "own ScreenCaptureKit SCStream; Jump Desktop not tested",
+  "leg" : "B-Terminal-screen",
+  "os" : "Version 26.6.2 (Build 25G83)",
+  "permissionPreflight" : true,
+  "reason" : "Fixed 8\/16\/24-second observations only; no visibility preference was changed and no hidden-target pass is inferred",
+  "samples" : [
+    {
+      "animatedPixelChanges" : 42,
+      "completeFrames" : 50,
+      "elapsedSeconds" : 8.5514167079999996,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "10506c1ba65a7f86",
+      "scheduledSecond" : 8,
+      "streamError" : null,
+      "strictVisibleTargets" : 0,
+      "targetPurplePixels" : 0,
+      "targetRects" : [
+
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    },
+    {
+      "animatedPixelChanges" : 84,
+      "completeFrames" : 96,
+      "elapsedSeconds" : 16.635094082999998,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "397fdf4b4585dd65",
+      "scheduledSecond" : 16,
+      "streamError" : null,
+      "strictVisibleTargets" : 0,
+      "targetPurplePixels" : 0,
+      "targetRects" : [
+
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    },
+    {
+      "animatedPixelChanges" : 122,
+      "completeFrames" : 134,
+      "elapsedSeconds" : 24.216099917000001,
+      "imageSaved" : true,
+      "lastAnimatedRegionHashFNV1a64" : "397fdf4b4585dd65",
+      "scheduledSecond" : 24,
+      "streamError" : null,
+      "strictVisibleTargets" : 0,
+      "targetPurplePixels" : 0,
+      "targetRects" : [
+
+      ],
+      "visualEvidenceSource" : "native screencapture menubar region"
+    }
+  ],
+  "schema" : 1,
+  "status" : "MEASUREMENT"
+}

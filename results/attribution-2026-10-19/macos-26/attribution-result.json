@@ -1,0 +1,200 @@
+{
+  "status": "MEASUREMENT",
+  "observedPattern": "VISIBLE_ABSENT_VISIBLE",
+  "manualScreenshotReviewRequired": true,
+  "captureSubject": "Own ScreenCaptureKit stream only; Jump Desktop/root capture service not tested",
+  "phases": {
+    "A1": {
+      "status": "MEASUREMENT",
+      "reason": "Fixed 8/16/24-second observations only; no visibility preference was changed and no hidden-target pass is inferred",
+      "permissionPreflight": true,
+      "continuousChangingCapture": true,
+      "strictVisible": true,
+      "strictAbsent": false,
+      "samples": [
+        {
+          "animatedPixelChanges": 43,
+          "completeFrames": 48,
+          "elapsedSeconds": 8.728568708,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "db1194e8ab639351",
+          "scheduledSecond": 8,
+          "streamError": null,
+          "strictVisibleTargets": 1,
+          "targetPurplePixels": 795,
+          "targetRects": [
+            {
+              "height": 30,
+              "width": 48,
+              "x": 748,
+              "y": 0
+            }
+          ],
+          "visualEvidenceSource": "native screencapture menubar region"
+        },
+        {
+          "animatedPixelChanges": 80,
+          "completeFrames": 87,
+          "elapsedSeconds": 16.487094791,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "a78cba82776946f8",
+          "scheduledSecond": 16,
+          "streamError": null,
+          "strictVisibleTargets": 1,
+          "targetPurplePixels": 795,
+          "targetRects": [
+            {
+              "height": 30,
+              "width": 48,
+              "x": 748,
+              "y": 0
+            }
+          ],
+          "visualEvidenceSource": "native screencapture menubar region"
+        },
+        {
+          "animatedPixelChanges": 119,
+          "completeFrames": 128,
+          "elapsedSeconds": 24.278649041,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "db1194e8ab639351",
+          "scheduledSecond": 24,
+          "streamError": null,
+          "strictVisibleTargets": 1,
+          "targetPurplePixels": 795,
+          "targetRects": [
+            {
+              "height": 30,
+              "width": 48,
+              "x": 748,
+              "y": 0
+            }
+          ],
+          "visualEvidenceSource": "native screencapture menubar region"
+        }
+      ]
+    },
+    "B": {
+      "status": "MEASUREMENT",
+      "reason": "Fixed 8/16/24-second observations only; no visibility preference was changed and no hidden-target pass is inferred",
+      "permissionPreflight": true,
+      "continuousChangingCapture": true,
+      "strictVisible": false,
+      "strictAbsent": true,
+      "samples": [
+        {
+          "animatedPixelChanges": 42,
+          "completeFrames": 50,
+          "elapsedSeconds": 8.551416708,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "10506c1ba65a7f86",
+          "scheduledSecond": 8,
+          "streamError": null,
+          "strictVisibleTargets": 0,
+          "targetPurplePixels": 0,
+          "targetRects": [],
+          "visualEvidenceSource": "native screencapture menubar region"
+        },
+        {
+          "animatedPixelChanges": 84,
+          "completeFrames": 96,
+          "elapsedSeconds": 16.635094083,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "397fdf4b4585dd65",
+          "scheduledSecond": 16,
+          "streamError": null,
+          "strictVisibleTargets": 0,
+          "targetPurplePixels": 0,
+          "targetRects": [],
+          "visualEvidenceSource": "native screencapture menubar region"
+        },
+        {
+          "animatedPixelChanges": 122,
+          "completeFrames": 134,
+          "elapsedSeconds": 24.216099917,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "397fdf4b4585dd65",
+          "scheduledSecond": 24,
+          "streamError": null,
+          "strictVisibleTargets": 0,
+          "targetPurplePixels": 0,
+          "targetRects": [],
+          "visualEvidenceSource": "native screencapture menubar region"
+        }
+      ]
+    },
+    "A2": {
+      "status": "MEASUREMENT",
+      "reason": "Fixed 8/16/24-second observations only; no visibility preference was changed and no hidden-target pass is inferred",
+      "permissionPreflight": true,
+      "continuousChangingCapture": true,
+      "strictVisible": true,
+      "strictAbsent": false,
+      "samples": [
+        {
+          "animatedPixelChanges": 40,
+          "completeFrames": 45,
+          "elapsedSeconds": 8.274169917,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "25f52d47a76b97f5",
+          "scheduledSecond": 8,
+          "streamError": null,
+          "strictVisibleTargets": 1,
+          "targetPurplePixels": 795,
+          "targetRects": [
+            {
+              "height": 30,
+              "width": 48,
+              "x": 748,
+              "y": 0
+            }
+          ],
+          "visualEvidenceSource": "native screencapture menubar region"
+        },
+        {
+          "animatedPixelChanges": 82,
+          "completeFrames": 89,
+          "elapsedSeconds": 16.534653125,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "25f52d47a76b97f5",
+          "scheduledSecond": 16,
+          "streamError": null,
+          "strictVisibleTargets": 1,
+          "targetPurplePixels": 795,
+          "targetRects": [
+            {
+              "height": 30,
+              "width": 48,
+              "x": 748,
+              "y": 0
+            }
+          ],
+          "visualEvidenceSource": "native screencapture menubar region"
+        },
+        {
+          "animatedPixelChanges": 120,
+          "completeFrames": 127,
+          "elapsedSeconds": 24.192600417,
+          "imageSaved": true,
+          "lastAnimatedRegionHashFNV1a64": "25f52d47a76b97f5",
+          "scheduledSecond": 24,
+          "streamError": null,
+          "strictVisibleTargets": 1,
+          "targetPurplePixels": 795,
+          "targetRects": [
+            {
+              "height": 30,
+              "width": 48,
+              "x": 748,
+              "y": 0
+            }
+          ],
+          "visualEvidenceSource": "native screencapture menubar region"
+        }
+      ]
+    }
+  },
+  "preferenceMutation": false,
+  "terminalLaunch": "Apple Terminal .command -> screen -dmS -> same capture Mach-O",
+  "primaryReport": "https://github.com/lwouis/alt-tab-macos/issues/2606#issuecomment-2351026226"
+}
